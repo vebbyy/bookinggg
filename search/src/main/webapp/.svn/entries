@@ -1,0 +1,126 @@
+10
+
+dir
+0
+https://hotelbookingfresh.googlecode.com/svn/trunk/Hotel_Booking/src/main/webapp
+https://hotelbookingfresh.googlecode.com/svn
+add
+
+
+
+
+
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+30dab23e-d443-92e2-c676-e646eb202e34
+
+META-INF
+dir
+
+
+
+add
+
+WEB-INF
+dir
+
+
+
+add
+
+bookHotel.xhtml
+file
+
+
+
+add
+
+bookingDetail.xhtml
+file
+
+
+
+add
+
+confirmBooking.xhtml
+file
+
+
+
+add
+
+footer.xhtml
+file
+
+
+
+add
+
+header.xhtml
+file
+
+
+
+add
+
+hotelDetail.xhtml
+file
+
+
+
+add
+
+index.jsp
+file
+
+
+
+add
+
+login.xhtml
+file
+
+
+
+add
+
+register.xhtml
+file
+
+
+
+add
+
+searchHome.xhtml
+file
+
+
+
+add
+
+template.xhtml
+file
+
+
+
+add
+
+welcome.xhtml
+file
+
+
+
+add
+

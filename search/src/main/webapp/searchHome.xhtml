@@ -1,0 +1,69 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:s="http://jboss.com/products/seam/taglib"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:fn="http://java.sun.com/jsp/jstl/functions"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:rich="http://richfaces.org/rich"
+	xmlns:c="http://java.sun.com/jstl/core"
+	xmlns:a="http://richfaces.org/a4j" template="/template.xhtml">
+	<ui:define name="searchHome">
+		<div class="search">
+		<h4>Search</h4>
+		<h:form>
+
+			<s:decorate>
+				<h:selectOneMenu value="#{searchModel.cityID}">
+					<s:selectItems var="c" value="#{cityList}" itemValue="#{c.id}"
+						label="#{c.name}" required="false" noSelectionLabel="Select" />
+						<a:support actionListener="#{searchAction.getHotelList}"
+					reRender="searchResults" event="onchange"/>
+				</h:selectOneMenu>
+			</s:decorate>
+
+
+			<h:inputText value="#{searchModel.hotelName}">
+				<a:support actionListener="#{searchAction.getHotelList}"
+					reRender="searchResults" event="onkeyup" />
+			</h:inputText>
+			<a:commandButton action="#{searchAction.getHotelList}"
+				reRender="searchResults" value="Search Hotels" />
+			<h:messages />
+		</h:form></div>
+		<h:form>
+			<a:outputPanel id="searchResults">
+				<div class="hotelList"><h:dataTable id="hotels"
+					value="#{hotelList}" var="hotel" rendered="#{hotelList.size>0}"
+					styleClass="tableClass"
+					columnClasses="hotelName,hotelCity,hotelDescription,hotelDetail"
+					rowClasses="h1">
+
+					<h:column>
+						<f:facet id="NameFacet" name="header">Name</f:facet>
+				#{hotel.name}
+				</h:column>
+					<h:column>
+						<f:facet id="NameFacet" name="header">City</f:facet>
+				#{hotel.city.name}
+				</h:column>
+
+					<h:column>
+						<f:facet id="NameFacet" name="header">Description</f:facet>
+				#{hotel.description}
+				</h:column>
+					<h:column>
+						<f:facet id="NameFacet" name="header">Hotel Detail</f:facet>
+
+						<h:commandLink value="View Detail"
+							action="#{hotelDetail.getHotelDetail(hotel)}">
+						</h:commandLink>
+
+					</h:column>
+
+				</h:dataTable></div>
+			</a:outputPanel>
+		</h:form>
+
+	</ui:define>
+</ui:composition>

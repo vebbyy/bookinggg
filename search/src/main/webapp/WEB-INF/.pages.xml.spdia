@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<diagram model-entity="SeamPagesDiagram">
+ <item ID="#register.xhtml" NAME="#xregister.xhtml"
+  PATH="/register.xhtml" SHAPE="24,17,0,0" TYPE="page" model-entity="SeamPagesDiagramItem">
+  <output ID="/login.xhtml" NAME="output" PATH="/login.xhtml"
+   TARGET="#xlogin.xhtml" model-entity="SeamPagesDiagramItemOutput"/>
+ </item>
+ <item ID="#login.xhtml" NAME="#xlogin.xhtml" PATH="/login.xhtml"
+  SHAPE="344,17,0,0" TYPE="page" model-entity="SeamPagesDiagramItem">
+  <output ID="/searchHome.xhtml" NAME="output" PATH="/searchHome.xhtml"
+   TARGET="#xsearchHome.xhtml" model-entity="SeamPagesDiagramItemOutput"/>
+ </item>
+ <item ID="#searchHome.xhtml" NAME="#xsearchHome.xhtml"
+  PATH="/searchHome.xhtml" SHAPE="664,17,0,0" TYPE="page" model-entity="SeamPagesDiagramItem">
+  <output ID="/bookHotel.xhtml" NAME="output" PATH="/bookHotel.xhtml"
+   TARGET="#xbookHotel.xhtml" model-entity="SeamPagesDiagramItemOutput"/>
+ </item>
+ <item ID="#hotelDetail.xhtml" NAME="#xhotelDetail.xhtml"
+  PATH="/hotelDetail.xhtml" SHAPE="984,17,0,0" TYPE="page" model-entity="SeamPagesDiagramItem">
+  <output ID="/bookingDetail.xhtml" NAME="output"
+   PATH="/bookingDetail.xhtml" TARGET="#xbookingDetail.xhtml" model-entity="SeamPagesDiagramItemOutput"/>
+ </item>
+ <item ID="#bookHotel.xhtml" NAME="#xbookingDetail.xhtml"
+  PATH="/bookHotel.xhtml" SHAPE="1304,17,0,0" TYPE="page" model-entity="SeamPagesDiagramItem">
+  <output ID="/bookHotel.xhtml" NAME="output" PATH="/bookHotel.xhtml"
+   TARGET="#xbookHotel.xhtml" model-entity="SeamPagesDiagramItemOutput"/>
+ </item>
+ <item ID="#bookHotel.xhtml" NAME="#xbookHotel.xhtml"
+  PATH="/bookHotel.xhtml" SHAPE="984,121,0,0" TYPE="page" model-entity="SeamPagesDiagramItem">
+  <output ID="/confirmBooking.xhtml" NAME="output"
+   PATH="/confirmBooking.xhtml" TARGET="#xconfirmBooking.xhtml" model-entity="SeamPagesDiagramItemOutput"/>
+ </item>
+ <item ID="#confirmBooking.xhtml" NAME="#xconfirmBooking.xhtml"
+  PATH="/confirmBooking.xhtml" SHAPE="24,121,0,0" TYPE="page" model-entity="SeamPagesDiagramItem">
+  <output ID="/searchHome.xhtml" NAME="output" PATH="/searchHome.xhtml"
+   TARGET="#xsearchHome.xhtml" model-entity="SeamPagesDiagramItemOutput"/>
+ </item>
+</diagram>

@@ -1,0 +1,24 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:s="http://jboss.com/products/seam/taglib"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:fn="http://java.sun.com/jsp/jstl/functions"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:rich="http://richfaces.org/rich"
+	xmlns:c="http://java.sun.com/jstl/core"
+	xmlns:a="http://richfaces.org/a4j">
+
+	
+	<h3 >Hotel Detail</h3>
+	<table >
+		<tr>
+			<td id="boldHotelAttribute"><s:label value="Hotel Name  :  " /></td>
+			<td><h:outputText value="#{hotel.name}" /></td>
+		</tr>
+		<tr>
+			<td id="boldHotelAttribute" ><s:label value="Hotel Rating  :  " /></td>
+			<td><h:outputText value="#{hotel.rating}" /></td>
+		</tr>
+	</table>
+</ui:composition>

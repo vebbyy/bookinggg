@@ -1,0 +1,121 @@
+body {
+	
+}
+
+.header {
+	color: blue;
+	text-align: center;
+}
+
+.footer {
+	color: blue;
+	text-align: center;
+}
+
+.loginHeader {
+	text-align: center;
+	padding-top: 10px;
+}
+
+.loginForm {
+	width: 300px;
+	height: auto;
+	border-style: solid;
+	border-width: 2px;
+	border-color: #EAEAEA;
+	padding: 2px;
+	margin: 0 auto;
+}
+
+#username {
+	padding-right: 18px;
+}
+
+#password {
+	padding-right: 25px;
+}
+
+.search {
+	padding-top: 20px;
+	width: 600px;
+	height: auto;
+	margin: 0 auto;
+}
+
+.hotelList {
+	padding-top: 20px;
+	margin: 0 auto;
+	width: 600px;
+}
+
+.logout {
+	text-align: right;
+	margin-top: -45px;
+}
+
+.hotelList h1 {
+	font-family: "Trebuchet MS", Arial, sans-serif;
+	line-height: normal;
+	font-weight: normal;
+	font-size: large;
+}
+
+.hotelList p {
+	line-height: 150%;
+	padding: 10px 0;
+	font-size: small;
+}
+
+.h1 {
+	font-family: "Trebuchet MS", Arial, sans-serif;
+	line-height: normal;
+	font-weight: normal;
+	font-size: large;
+}
+
+p {
+	line-height: 150%;
+	padding: 10px 0;
+	font-size: small;
+}
+
+.h1 {
+	font-family: "Trebuchet MS", Arial, sans-serif;
+	line-height: normal;
+	font-weight: normal;
+	font-size: small;
+	text-align: center;
+}
+
+.hotelName {
+	width: 75px;
+}
+
+.hotelDescription {
+	width: 75px;
+}
+
+.hotelCity {
+	width: 75px;
+}
+
+.hotelDetail {
+	width: 100px;
+}
+
+#boldHotelAttribute {
+	font-size: medium;
+	font-weight: bold;
+}
+
+#hotelDetailHeader {
+	padding-bottom: 30px;
+	width: 200px;
+	margin: 0 auto;
+}
+
+.bookHotelParentClass {
+	padding-top: 40px;
+	width: 400px;
+	margin: 0 auto;
+}

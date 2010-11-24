@@ -1,0 +1,25 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:s="http://jboss.com/products/seam/taglib"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:fn="http://java.sun.com/jsp/jstl/functions"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:rich="http://richfaces.org/rich"
+	xmlns:c="http://java.sun.com/jstl/core"
+	xmlns:a="http://richfaces.org/a4j" template="/template.xhtml">
+	<ui:define name="login">
+		<h4 class="loginHeader">Enter the login details</h4>
+		<div class="loginForm"><h:form >
+			<label id="username">User name:</label>
+			<h:inputText id="userName" value="#{credentials.username}" required="true" />
+			<label id="password">Password:</label>
+			<h:inputSecret value="#{credentials.password}" required="true" />
+			<br />
+			<h:commandButton id="register" value="Login"
+				action="#{identity.login}" />
+			
+		</h:form> <a href="register.htm">New User</a></div>
+		<h:messages />
+	</ui:define>
+</ui:composition>

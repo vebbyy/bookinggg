@@ -1,0 +1,35 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<f:view contentType="text/html" xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:a="http://richfaces.org/a4j"
+	xmlns:s="http://jboss.com/products/seam/taglib"
+	xmlns:rich="http://richfaces.org/rich">
+	<html>
+	<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<link rel="stylesheet" type="text/css" href="styles/templateStyle.css" />
+	<title>Hotel Booking Application</title>
+	</head>
+	<body>
+	<ui:include src="header.xhtml" />
+
+	<div class="logout"><h:form>
+		<h:commandButton id="logoutLink" view="/index.jsp"
+			action="#{identity.logout}" value="Logout"
+			rendered="#{identity.loggedIn}" propagation="end" />
+	</h:form>
+	</div>
+
+	<div class="bookHotelParentClass">
+	<ui:insert name="searchHome" />
+	<ui:insert name="register" />
+	<ui:insert name="login" />
+	<ui:insert name="bookHotel" />
+	<ui:insert name="confirmBooking" />
+	</div>
+	<ui:include src="footer.xhtml" />
+	</body>
+	</html>
+</f:view>

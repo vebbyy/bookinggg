@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<dataset>
+	<hotel id="1" name="Taj Hotel" isBooked="0"/>
+	<hotel id="2" name="Radison" isBooked="0"/>
+	<customer userName = "abcd" password = "abcd" />
+	
+</dataset>

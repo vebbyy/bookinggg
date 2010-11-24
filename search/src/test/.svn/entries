@@ -1,0 +1,42 @@
+10
+
+dir
+0
+https://hotelbookingfresh.googlecode.com/svn/trunk/Hotel_Booking/src/test
+https://hotelbookingfresh.googlecode.com/svn
+add
+
+
+
+
+
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+30dab23e-d443-92e2-c676-e646eb202e34
+
+java
+dir
+
+
+
+add
+
+resources
+dir
+
+
+
+add
+

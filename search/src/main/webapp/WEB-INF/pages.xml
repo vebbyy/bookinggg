@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pages no-conversation-view-id="/home.xhtml"
+	xmlns="http://jboss.com/products/seam/pages" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://jboss.com/products/seam/pages http://jboss.com/products/seam/pages-2.1.xsd"
+	login-view-id="/login.xhtml">
+
+
+
+	<page view-id="/register.xhtml">
+		<navigation>
+			<redirect view-id="/login.xhtml"></redirect>
+		</navigation>
+
+	</page>
+	<page view-id="/login.xhtml">
+		<navigation >
+			<redirect  view-id="/searchHome.xhtml" />
+		</navigation>
+
+	</page>
+	<page view-id="/searchHome.xhtml" login-required="true">
+		<navigation>
+			<rule if-outcome="bookHotel">
+				<redirect view-id="/bookHotel.xhtml"></redirect>
+			</rule>
+		</navigation>
+	</page>
+
+	<page view-id="/hotelDetail.xhtml" login-required="true">
+		<navigation>
+			<redirect view-id="/bookingDetail.xhtml"></redirect>
+		</navigation>
+	</page>
+
+	<page view-id="/bookHotel.xhtml" login-required="true">
+		<navigation>
+			<redirect view-id="/confirmBooking.xhtml"></redirect>
+		</navigation>
+	</page>
+	<page view-id="/confirmBooking.xhtml" login-required="true">
+		<navigation>
+			<rule if-outcome="success">
+				<redirect view-id="/searchHome.xhtml"></redirect>
+			</rule>
+		</navigation>
+
+	</page>
+
+
+</pages>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<components xmlns="http://jboss.com/products/seam/components"
+	xmlns:core="http://jboss.com/products/seam/core" xmlns:persistence="http://jboss.com/products/seam/persistence"
+	xmlns:transaction="http://jboss.com/products/seam/transaction"
+	xmlns:international="http://jboss.com/products/seam/international"
+	xmlns:web="http://jboss.com/products/seam/web" xmlns:security="http://jboss.com/products/seam/security"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:mail="http://jboss.com/products/seam/mail"
+	xmlns:document="http://jboss.com/products/seam/document"
+	xmlns:navigation="http://jboss.com/products/seam/navigation"
+	xmlns:cache="http://jboss.com/products/seam/cache"
+	xsi:schemaLocation="
+            http://jboss.com/products/seam/core http://jboss.com/products/seam/core-2.2.xsd
+            http://jboss.com/products/seam/persistence http://jboss.com/products/seam/persistence-2.2.xsd
+            http://jboss.com/products/seam/international http://jboss.com/products/seam/international-2.2.xsd
+            http://jboss.com/products/seam/transaction http://jboss.com/products/seam/transaction-2.2.xsd
+            http://jboss.com/products/seam/security http://jboss.com/products/seam/security-2.2.xsd
+            http://jboss.com/products/seam/components http://jboss.com/products/seam/components-2.2.xsd
+            http://jboss.com/products/seam/web http://jboss.com/products/seam/web-2.2.xsd
+            http://jboss.com/products/seam/navigation http://jboss.com/products/seam/navigation-2.2.xsd
+            http://jboss.com/products/seam/document http://jboss.com/products/seam/document-2.2.xsd
+            ">
+	<transaction:hibernate-transaction
+		session="#{hibernateSession}"></transaction:hibernate-transaction>
+	<persistence:hibernate-session-factory
+		name="hibernateSessionFactory" cfg-resource-name="hibernate.cfg.xml" />
+
+	<persistence:managed-hibernate-session
+		name="hibernateSession" session-factory="#{hibernateSessionFactory}"
+		auto-create="true" />
+
+	<component name="hibernateTemplate"
+		class="com.xebia.hotelBooking.hibernate.HibernateTemplate"
+		auto-create="true">
+		<property name="session">#{hibernateSession}</property>
+	</component>
+	<component name="registerService"
+		class="com.xebia.hotelBooking.service.impl.RegistrationServiceImpl"
+		auto-create="true">
+		<property name="hibernateTemplate">#{hibernateTemplate}</property>
+	</component>
+	<component name="loginService"
+		class="com.xebia.hotelBooking.service.impl.LoginServiceImpl"
+		auto-create="true">
+		<property name="hibernateTemplate">#{hibernateTemplate}</property>
+	</component>
+	<component name="searchHotelService"
+		class="com.xebia.hotelBooking.service.impl.SearchHotelServiceImpl"
+		auto-create="true">
+		<property name="hibernateTemplate">#{hibernateTemplate}</property>
+	</component>
+	<component name="bookingService"
+		class="com.xebia.hotelBooking.service.impl.BookingServiceImpl"
+		auto-create="true">
+		<property name="hibernateTemplate">#{hibernateTemplate}</property>
+	</component>
+	<component name="user" class="com.xebia.hotelBooking.domain.Customer"></component>
+
+
+	<security:identity authenticate-method="#{loginAction.verifyLogin}"></security:identity>
+</components>
